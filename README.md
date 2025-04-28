@@ -37,3 +37,4 @@ Local debugging: `npm run dev`
 - Flexible and clean styling with Tailwind CSS
 - Purely static pages, excellent Lighthouse scores
 - Modular, responsive and scalable components
+- i18n-based internationalization

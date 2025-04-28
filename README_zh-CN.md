@@ -38,3 +38,4 @@ Plasmic CMS API 配置及文档：https://docs.plasmic.app/learn/plasmic-cms-api
 - Tailwind CSS 构建灵活简洁的样式
 - 纯静态页面，Lighthouse 分数优秀
 - 模块化、响应式、可扩展的组件
+- 基于 i18n 的国际化
