@@ -17,4 +17,4 @@ Install dependencies: `npm install`
 Local debugging: `npm run dev`
 
 ## Deploy
-[![Deploy with EdgeOne Pages](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://console.cloud.tencent.com/edgeone/pages/new?template=tech-company-website-template)
+[![Deploy with EdgeOne Pages](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?template=tech-company-website-template)
