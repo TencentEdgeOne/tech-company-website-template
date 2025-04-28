@@ -4,6 +4,7 @@
   "viewDetails": "查看详情",
   "allProjects": "浏览所有项目",
   "backToList": "返回列表",
+  "backToHome": "返回首页",
   "sendMessage": "发送消息",
   "form": {
     "name": "姓名",

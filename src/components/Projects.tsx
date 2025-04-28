@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { useTranslation } from 'next-i18next';
 import Link from './Link';
 
@@ -27,13 +26,12 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 md:mb-16 w-full">
           {/* Project Card 1 (Left Column) */}
           <div className="bg-[var(--bg-gray)] rounded-[33px] overflow-hidden relative min-h-[400px] md:min-h-[500px] flex flex-col justify-end p-6 md:p-8 text-white">
-            <Image
-              src="/images/project-bg-1.webp"
-              alt={t('projectsSection.card1.alt', { defaultValue: '项目一背景'})}
-              layout="fill"
-              objectFit="cover"
-              className="z-0"
-            />
+            <div 
+              className="absolute inset-0 z-0 bg-cover bg-center" 
+              style={{ backgroundImage: "url('/images/project-bg-1.webp')" }}
+              role="img" 
+              aria-label={t('projectsSection.card1.alt', { defaultValue: '项目一背景'})}
+            ></div>
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10 z-10"></div>
             {/* Card Content */}
@@ -57,23 +55,13 @@ const Projects = () => {
             {/* Project Card 2 (Top card in the right column) */}
             <Link href="/projects/2" className="block no-underline">
                 <div className="bg-[var(--bg-gray)] rounded-[33px] overflow-hidden relative min-h-[400px] md:min-h-[234px] flex flex-col justify-end p-6 md:p-8 text-white group hover:shadow-xl transition-shadow duration-300">
-                 <Image
-                   src="/images/project-bg-1.webp"
-                    alt={t('projectsSection.card2.backgroundAlt', { defaultValue: '项目二背景'})}
-                   layout="fill"
-                   objectFit="cover"
-                   className="z-0"
-                 />
-                 <div className="absolute inset-0 flex items-center justify-center z-10 p-8">
-                   <Image
-                     src="/images/project-bg-1.webp"
-                      alt={t('projectsSection.card2.mockupAlt', { defaultValue: '项目二图片'})}
-                     width={400}
-                     height={150}
-                     objectFit="contain"
-                     className="group-hover:scale-105 transition-transform duration-300"
-                   />
-                 </div>
+                 <div 
+                   className="absolute inset-0 z-0 bg-cover bg-center"
+                   style={{ backgroundImage: "url('/images/project-bg-1.webp')" }}
+                   role="img"
+                   aria-label={t('projectsSection.card2.backgroundAlt', { defaultValue: '项目二背景'})}
+                 ></div>
+                 
                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
                  <div className="relative z-20 flex flex-col items-start">
                    <h3 className="text-xl md:text-2xl font-bold font-[Poppins] mb-1">
@@ -89,23 +77,13 @@ const Projects = () => {
             {/* Project Card 3 (Bottom card in the right column) */}
             <Link href="/projects/3" className="block no-underline">
                <div className="bg-[var(--bg-gray)] rounded-[33px] overflow-hidden relative min-h-[400px] md:min-h-[234px] flex flex-col justify-end p-6 md:p-8 text-white group hover:shadow-xl transition-shadow duration-300">
-                 <Image
-                   src="/images/project-bg-1.webp"
-                    alt={t('projectsSection.card3.backgroundAlt', { defaultValue: '项目三背景'})}
-                   layout="fill"
-                   objectFit="cover"
-                   className="z-0"
-                 />
-                 <div className="absolute inset-0 flex items-center justify-center z-10 p-8">
-                   <Image
-                     src="/images/project-bg-1.webp"
-                      alt={t('projectsSection.card3.mockupAlt', { defaultValue: '项目三屏幕模型'})}
-                     width={400}
-                     height={150}
-                     objectFit="contain"
-                     className="group-hover:scale-105 transition-transform duration-300"
-                   />
-                 </div>
+                 <div 
+                   className="absolute inset-0 z-0 bg-cover bg-center"
+                   style={{ backgroundImage: "url('/images/project-bg-1.webp')" }}
+                   role="img"
+                   aria-label={t('projectsSection.card3.backgroundAlt', { defaultValue: '项目三背景'})}
+                 ></div>
+                
                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
                  <div className="relative z-20 flex flex-col items-start">
                    <h3 className="text-xl md:text-2xl font-bold font-[Poppins] mb-1">
