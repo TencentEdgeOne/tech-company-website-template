@@ -4,12 +4,17 @@ import { appWithTranslation } from 'next-i18next';
 import TopHeader from "@/components/TopHeader";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 function App({ Component, pageProps }: AppProps) {
   const { isNewsEnabled = false } = pageProps;
 
   return (
     <>
+      <Head>
+        <title>Tech Company Website Template</title>
+        <meta name="description" content="A Tech Company Website Template with Next.js, Tailwind CSS, and Plasmic CMS." />
+      </Head>
       <TopHeader />
       <Navbar isNewsEnabled={isNewsEnabled}/>
       <main>

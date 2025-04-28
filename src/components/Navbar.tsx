@@ -74,6 +74,7 @@ const Navbar = ({isNewsEnabled}: {isNewsEnabled: boolean}) => {
             {/* Language Switcher Dropdown */}
             <div className="relative hidden md:block" ref={dropdownRef}> 
                 <button 
+                    id="language-switcher"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                     className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none"
                 >

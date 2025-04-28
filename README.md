@@ -31,3 +31,9 @@ Local debugging: `npm run dev`
 
 ## Deploy
 [![Deploy with EdgeOne Pages](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?template=tech-company-website-template)
+
+## Features
+- Developed with Next.js TypeScript
+- Flexible and clean styling with Tailwind CSS
+- Purely static pages, excellent Lighthouse scores
+- Modular, responsive and scalable components

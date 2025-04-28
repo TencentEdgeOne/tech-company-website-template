@@ -32,3 +32,9 @@ Plasmic CMS API 配置及文档：https://docs.plasmic.app/learn/plasmic-cms-api
 
 ## 部署
 [![使用 EdgeOne Pages 部署](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://console.cloud.tencent.com/edgeone/pages/new?template=tech-company-website-template)
+
+## 特性
+- 使用Next.js TypeScript 开发
+- Tailwind CSS 构建灵活简洁的样式
+- 纯静态页面，Lighthouse 分数优秀
+- 模块化、响应式、可扩展的组件

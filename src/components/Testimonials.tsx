@@ -71,6 +71,8 @@ const Testimonials = () => {
         <div className="flex space-x-2">
           {scrollSnaps.map((_, index) => (
             <button 
+              id={`carousel-dot-${index}`}
+              aria-label={`Carousel dot ${index + 1}`}
               key={index} 
               onClick={() => scrollTo(index)}
               className={`w-3 h-3 rounded-full transition-colors ${index === selectedIndex ? 'bg-[var(--primary)]' : 'bg-gray-300 hover:bg-gray-400'}`}
