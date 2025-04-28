@@ -6,6 +6,8 @@
   "backToList": "Back to List",
   "backToHome": "Back to Home",
   "sendMessage": "Send Message",
+  "readMore": "Read More",
+  "backToNewsList": "Back to News List",
   "form": {
     "name": "Name",
     "email": "Email",

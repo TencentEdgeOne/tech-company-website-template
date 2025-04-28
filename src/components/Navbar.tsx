@@ -19,6 +19,7 @@ const Navbar = () => {
     // Use keys from translation file
     { name: t('home'), href: '/' },
     { name: t('partners'), href: '/partners' },
+    { name: t('news'), href: '/news' },
     { name: t('projects'), href: '/projects' },
     { name: t('about'), href: '/about' },
     { name: t('contact'), href: '/contact' },

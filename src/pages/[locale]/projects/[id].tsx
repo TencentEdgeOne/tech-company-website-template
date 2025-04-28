@@ -69,7 +69,7 @@ const ProjectDetailPage: NextPage<ProjectDetailPageProps> = ({ project }) => {
         {/* Tags */}
         <div className="mb-6 text-center">
            {project.tags.map((tag, index) => (
-             <span key={index} className="inline-block bg-blue-100 text-[var(--primary)] text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">
+             <span key={index} className="inline-block border border-[var(--primary)] text-[var(--primary)] text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">
                {tag} {/* Display tag directly from JSON */}
              </span>
            ))}

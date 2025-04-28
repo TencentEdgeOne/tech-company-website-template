@@ -6,6 +6,8 @@
   "backToList": "返回列表",
   "backToHome": "返回首页",
   "sendMessage": "发送消息",
+  "readMore": "阅读更多",
+  "backToNewsList": "返回新闻列表",
   "form": {
     "name": "姓名",
     "email": "邮箱",
