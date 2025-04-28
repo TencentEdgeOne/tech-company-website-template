@@ -6,10 +6,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 function App({ Component, pageProps }: AppProps) {
+  const { isNewsEnabled = false } = pageProps;
+
   return (
     <>
       <TopHeader />
-      <Navbar />
+      <Navbar isNewsEnabled={isNewsEnabled}/>
       <main>
         <Component {...pageProps} />
       </main>

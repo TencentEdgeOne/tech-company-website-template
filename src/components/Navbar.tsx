@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 import LanguageSwitchLink from './LanguageSwitchLink'; // Import language switcher
 import i18nextConfig from '../../next-i18next.config.js'; // Import config for locales list
 
-const Navbar = () => {
+const Navbar = ({isNewsEnabled}: {isNewsEnabled: boolean}) => {
   const router = useRouter();
   const { t } = useTranslation('navbar');
   const { t: tCommon } = useTranslation('common');
@@ -15,11 +15,18 @@ const Navbar = () => {
   const currentLocale = router.query.locale || i18nextConfig.i18n.defaultLocale;
   const locales = i18nextConfig.i18n.locales;
 
-  const navLinks = [
+  const navLinks = isNewsEnabled ? [
     // Use keys from translation file
     { name: t('home'), href: '/' },
     { name: t('partners'), href: '/partners' },
     { name: t('news'), href: '/news' },
+    { name: t('projects'), href: '/projects' },
+    { name: t('about'), href: '/about' },
+    { name: t('contact'), href: '/contact' },
+  ] : [
+    // Use keys from translation file
+    { name: t('home'), href: '/' },
+    { name: t('partners'), href: '/partners' },
     { name: t('projects'), href: '/projects' },
     { name: t('about'), href: '/about' },
     { name: t('contact'), href: '/contact' },
@@ -92,6 +99,8 @@ const Navbar = () => {
                     </div>
                 )}
             </div>
+
+
         </div>
 
         {/* Mobile Menu Button */}

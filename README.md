@@ -5,6 +5,19 @@ The UI is based on [Business Tech Company UI Kit](https://www.figma.com/communit
 
 Tech stack: Next.js + Tailwind CSS, with internationalization support.
 
+## Environment Variables
+The news page in this template uses the Plasmic CMS API for content management.
+> If this feature and its pages are not needed, you can set the corresponding environment variable to `ignore`. The project will then automatically skip all news-related pages and links.
+
+Plasmic CMS API configuration and documentation: https://docs.plasmic.app/learn/plasmic-cms-api-reference/
+
+This template uses internationalization, so the article content also requires corresponding multi-language versions. You need to configure `Locales` on the Plasmic settings page:
+![](https://cdnstatic.tencentcs.com/edgeone/pages/docs/tech-company-website-template-doc1.png)
+
+Return to the Model page to create the News data structure, the details are as follows:
+![](https://cdnstatic.tencentcs.com/edgeone/pages/docs/tech-company-website-template-doc2.png)
+
+
 ## Code Customization
 Main color theme: Modify the theme color in `src/styles/globals.css`
 

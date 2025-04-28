@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import { GetStaticPaths, GetStaticProps, NextPage, GetStaticPropsContext } from 'next';
+import { GetStaticProps, NextPage, GetStaticPropsContext } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import i18nextConfig from '../../../next-i18next.config.js';
 import fs from 'fs';
 import path from 'path';
-
+import { getStaticPaths } from '../../lib/getStatic.js';
 // Remove hardcoded data
 // const teamMembers = [ ... ];
 
@@ -130,17 +130,10 @@ const AboutPage: NextPage<AboutPageProps> = ({ teamMembers }) => {
   );
 };
 
-// Define own getStaticPaths as it depends on locale
-export const getStaticPaths: GetStaticPaths = async () => {
-  const locales = i18nextConfig.i18n.locales;
-  const paths = locales.map((locale) => ({
-    params: { locale },
-  }));
-  return { paths, fallback: false };
-};
+
 
 // Fetch translations and team data
-export const getStaticProps: GetStaticProps<AboutPageProps, { locale: string }> = async (context: GetStaticPropsContext<{ locale: string }>) => {
+const getStaticProps: GetStaticProps<AboutPageProps, { locale: string }> = async (context: GetStaticPropsContext<{ locale: string }>) => {
     const locale = context.params?.locale || i18nextConfig.i18n.defaultLocale;
     let teamMembers: TeamMember[] = [];
     let allTranslations = {};
@@ -162,10 +155,11 @@ export const getStaticProps: GetStaticProps<AboutPageProps, { locale: string }> 
 
     return {
       props: {
+        isNewsEnabled: process.env.PLASMIC_CMS_ID !== 'ignore',
         ...allTranslations,
         teamMembers,
       },
     };
 };
-
+export  { getStaticPaths, getStaticProps };
 export default AboutPage; 

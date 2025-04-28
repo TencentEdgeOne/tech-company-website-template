@@ -118,6 +118,7 @@ export const getStaticProps: GetStaticProps<ProjectsPageProps, { locale: string 
 
     return {
       props: {
+        isNewsEnabled: process.env.PLASMIC_CMS_ID !== 'ignore',
         ...allTranslations,
         projectsList, // Add projectsList to props
       },
