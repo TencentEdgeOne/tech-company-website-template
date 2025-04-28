@@ -1,7 +1,9 @@
 # 科技公司官网模板
 此模板是一个通用的科技公司官网模板，你可以通过修改文案、图片、颜色快速搭建属于自己的公司官网。
+
 UI 基于[Business Tech Company UI Kit
 ](https://www.figma.com/community/file/1286806143648573757/business-tech-company-ui-kit)实现。
+
 技术栈为：Next.js + Tailwind CSS，并支持国际化。
 
 ## 代码定制

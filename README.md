@@ -1,6 +1,8 @@
 # Technology Company Website Template
 This template is a general-purpose technology company website template. You can quickly build your own company website by modifying the text, images, and colors.
+
 The UI is based on [Business Tech Company UI Kit](https://www.figma.com/community/file/1286806143648573757/business-tech-company-ui-kit).
+
 Tech stack: Next.js + Tailwind CSS, with internationalization support.
 
 ## Code Customization
