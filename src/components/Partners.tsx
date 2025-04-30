@@ -23,7 +23,7 @@ const Partners = () => {
 
         {/* Logos */}
         {/* Adjust grid columns based on the number of logos */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 items-center justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 items-center justify-items-center">
           {partners.map((partner) => (
             <div key={partner.id} className="transition duration-300 ease-in-out">
               {/* Using img tag for SVG for better control, could use Image component if needed */}
