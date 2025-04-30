@@ -80,7 +80,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center text-[var(--accent-gray)] text-sm font-[Plus Jakarta Sans] pt-8 border-t border-gray-300">
-           {t('copyright', { defaultValue: '© {year} CAGANTECH. 版权所有', year: new Date().getFullYear() })}
+           {t('copyright', { defaultValue: '© {{year}} CAGANTECH. 版权所有', year: new Date().getFullYear() })}
         </div>
       </div>
     </footer>

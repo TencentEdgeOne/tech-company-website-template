@@ -29,5 +29,5 @@
     "description": "选择 CAGANTECH，选择创新、可靠、现代化的技术伙伴。",
     "button": "开始合作"
   },
-  "copyright": "© {year} CAGANTECH. 版权所有"
+  "copyright": "© {{year}} CAGANTECH. 版权所有"
 } 
