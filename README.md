@@ -5,6 +5,20 @@ The UI is based on [Business Tech Company UI Kit](https://www.figma.com/communit
 
 Tech stack: Next.js + Tailwind CSS, with internationalization support.
 
+## Features
+- Developed with Next.js TypeScript
+- Flexible and clean styling with Tailwind CSS
+- Purely static pages, excellent Lighthouse scores
+- Modular, responsive and scalable components
+- i18n-based internationalization
+
+## Code Customization
+Main color theme: Modify the theme color in `src/styles/globals.css`
+
+Replace images: Replace in `public/images/`
+
+Internationalization: Internationalization uses next-i18next, with translation files stored in `public/locales/en` and `public/locales/zh`
+
 ## Environment Variables
 The news page in this template uses the Plasmic CMS API for content management.
 > If this feature and its pages are not needed, you can set the corresponding environment variable to `ignore`. The project will then automatically skip all news-related pages and links.
@@ -18,12 +32,6 @@ Return to the Model page to create the News data structure, the details are as f
 ![](https://cdnstatic.tencentcs.com/edgeone/pages/docs/tech-company-website-template-doc2.png)
 
 
-## Code Customization
-Main color theme: Modify the theme color in `src/styles/globals.css`
-
-Replace images: Replace in `public/images/`
-
-Internationalization: Internationalization uses next-i18next, with translation files stored in `public/locales/en` and `public/locales/zh`
 
 ## Local Development
 Install dependencies: `npm install`
@@ -32,9 +40,3 @@ Local debugging: `npm run dev`
 ## Deploy
 [![Deploy with EdgeOne Pages](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?template=tech-company-website-template)
 
-## Features
-- Developed with Next.js TypeScript
-- Flexible and clean styling with Tailwind CSS
-- Purely static pages, excellent Lighthouse scores
-- Modular, responsive and scalable components
-- i18n-based internationalization

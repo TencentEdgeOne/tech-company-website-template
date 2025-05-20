@@ -6,6 +6,22 @@ UI 基于[Business Tech Company UI Kit
 
 技术栈为：Next.js + Tailwind CSS，并支持国际化。
 
+
+## 特性
+- 使用Next.js TypeScript 开发
+- Tailwind CSS 构建灵活简洁的样式
+- 纯静态页面，Lighthouse 分数优秀
+- 模块化、响应式、可扩展的组件
+- 基于 i18n 的国际化
+
+## 代码定制
+主色调：在`src/styles/globals.css`修改主题色调
+
+替换图片：在`public/images/`下替换
+
+国际化：国际化使用了 next-i18next，翻译文件存储在`public/locales/en`和 `public/locales/zh`
+
+
 ## 环境变量
 此模板的新闻页面使用了PLASMIC CMS API 进行内容管理。
 > 如果不需要此功能及页面，可以在环境变量填入 ignore，项目会自动跳过所有 news 相关的页面和链接。
@@ -18,13 +34,6 @@ Plasmic CMS API 配置及文档：https://docs.plasmic.app/learn/plasmic-cms-api
 回到 Model 页面创建 News 数据结构，详情如下：
 ![](https://cdnstatic.tencentcs.com/edgeone/pages/docs/tech-company-website-template-doc2.png)
 
-## 代码定制
-主色调：在`src/styles/globals.css`修改主题色调
-
-替换图片：在`public/images/`下替换
-
-国际化：国际化使用了 next-i18next，翻译文件存储在`public/locales/en`和 `public/locales/zh`
-
 
 ## 本地开发
 安装依赖：`npm install`
@@ -33,9 +42,3 @@ Plasmic CMS API 配置及文档：https://docs.plasmic.app/learn/plasmic-cms-api
 ## 部署
 [![使用 EdgeOne Pages 部署](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://console.cloud.tencent.com/edgeone/pages/new?template=tech-company-website-template)
 
-## 特性
-- 使用Next.js TypeScript 开发
-- Tailwind CSS 构建灵活简洁的样式
-- 纯静态页面，Lighthouse 分数优秀
-- 模块化、响应式、可扩展的组件
-- 基于 i18n 的国际化

@@ -86,7 +86,7 @@ const ContactPage: NextPage = () => {
                   type="text"
                   name="name"
                   id="name"
-                  required
+                  // required
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[var(--primary)] focus:border-[var(--primary)] transition duration-150 ease-in-out"
@@ -98,7 +98,7 @@ const ContactPage: NextPage = () => {
                   type="email"
                   name="email"
                   id="email"
-                  required
+                  // required
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[var(--primary)] focus:border-[var(--primary)] transition duration-150 ease-in-out"
@@ -110,7 +110,7 @@ const ContactPage: NextPage = () => {
                   type="text"
                   name="subject"
                   id="subject"
-                  required
+                  // required
                   value={formData.subject}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[var(--primary)] focus:border-[var(--primary)] transition duration-150 ease-in-out"
@@ -122,7 +122,7 @@ const ContactPage: NextPage = () => {
                   name="message"
                   id="message"
                   rows={5}
-                  required
+                  // required
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[var(--primary)] focus:border-[var(--primary)] transition duration-150 ease-in-out"
