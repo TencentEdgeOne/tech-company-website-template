@@ -213,6 +213,7 @@ export const getStaticProps: GetStaticProps<NewsPageProps> = async ({ params }) 
 
   return {
     props: {
+      isNewsEnabled: process.env.PLASMIC_CMS_ID !== 'ignore',
       newsItems, // Pass the fetched data
       ...(await serverSideTranslations(locale, namespacesRequired)),
     },
