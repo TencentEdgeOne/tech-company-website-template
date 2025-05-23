@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import LanguageSwitchLink from './LanguageSwitchLink'; // Import language switcher
 import i18nextConfig from '../../next-i18next.config.js'; // Import config for locales list
+import { COMPANY_NAME } from '../lib/companyConfig';
 
 interface NavbarProps {
     isNewsEnabled: boolean;
@@ -58,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ isNewsEnabled }) => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-3xl font-extrabold font-[Poppins]">
-          <Link href="/">CAGANTECH</Link>
+          <Link href="/">{COMPANY_NAME}</Link>
         </div>
 
         {/* Desktop Menu & Language Switcher */}

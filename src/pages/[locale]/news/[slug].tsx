@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next';
 import Head from 'next/head';
 import Link from '@/components/Link'; // Your custom Link component
 import i18nextConfig from '../../../../next-i18next.config.js'; // Adjust path as needed
+import { mapLocaleForPlasmic } from '@/lib/localeMap';
 
 // --- Interfaces for Plasmic Data ---
 interface NewsArticleData {
@@ -177,7 +178,7 @@ export const getStaticProps: GetStaticProps<NewsDetailPageProps> = async ({ para
               limit: 1
           }),
           // Fetch the specific locale version
-          locale: locale === 'zh' ? 'default' : locale // Use your locale mapping logic
+          locale: mapLocaleForPlasmic(locale)
       });
       const apiUrl = `https://data.plasmic.app/api/v1/cms/databases/${CMS_ID}/tables/${CMS_MODEL_ID}/query?${queryParams.toString()}`;
 
@@ -219,8 +220,6 @@ export const getStaticProps: GetStaticProps<NewsDetailPageProps> = async ({ para
       article,
       ...(await serverSideTranslations(locale, namespacesRequired)),
     },
-     // Optional: Add revalidation
-     // revalidate: 60
   };
 };
 

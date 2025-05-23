@@ -6,6 +6,7 @@ import i18nextConfig from '../../../next-i18next.config.js';
 import fs from 'fs';
 import path from 'path';
 import { getStaticPaths } from '../../lib/getStatic.js';
+import { COMPANY_NAME } from '../../lib/companyConfig';
 // Remove hardcoded data
 // const teamMembers = [ ... ];
 
@@ -36,7 +37,7 @@ const AboutPage: NextPage<AboutPageProps> = ({ teamMembers }) => {
       <div className="bg-white py-16 md:py-24 px-4">
         <div className="container mx-auto text-center mb-12 md:mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--secondary)] font-[Poppins] mb-4">
-                {t('pageTitle', { defaultValue: '关于 CAGANTECH'})}
+                {t('pageTitle', { defaultValue: `关于 ${COMPANY_NAME}`, companyName: COMPANY_NAME })}
             </h1>
             <p className="text-lg md:text-xl text-[var(--accent-gray)] font-[Asap] max-w-3xl mx-auto">
                 {t('pageDescription', { defaultValue: '了解我们的故事、使命、价值观以及驱动我们前进的团队。'})}
@@ -83,7 +84,7 @@ const AboutPage: NextPage<AboutPageProps> = ({ teamMembers }) => {
              </h2>
             <div className="prose lg:prose-lg max-w-none mx-auto text-gray-700 font-[Asap] leading-relaxed text-left md:text-center">
                 <p>
-                    {t('historySection.paragraph1', { defaultValue: 'CAGANTECH 成立于 [创立年份]，最初专注于 [早期业务领域]。凭借对技术的热情和对客户需求的深刻理解，我们逐步扩展业务范围，在 [关键里程碑1，例如进入新市场或发布重要产品] 取得了显著进展。', components: { span: <span /> } })}
+                    {t('historySection.paragraph1', { defaultValue: `${COMPANY_NAME} 成立于 [创立年份]，最初专注于 [早期业务领域]。凭借对技术的热情和对客户需求的深刻理解，我们逐步扩展业务范围，在 [关键里程碑1，例如进入新市场或发布重要产品] 取得了显著进展。`, components: { span: <span /> } , companyName: COMPANY_NAME })}
                 </p>
                 <p>
                      {t('historySection.paragraph2', { defaultValue: '多年来，我们始终坚持 [公司核心价值观，例如：创新、诚信、合作] 的原则，不断积累技术实力，优化服务流程。在 [关键里程碑2，例如获得重要认证或完成重大项目] 后，公司进入了新的发展阶段。如今，我们已成为 [当前市场定位或行业描述] 领域值得信赖的合作伙伴。', components: { span: <span /> } })}

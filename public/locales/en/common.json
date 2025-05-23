@@ -1,5 +1,5 @@
 {
-  "companyName": "CAGANTECH",
+  "companyName": "{{companyName}}",
   "learnMore": "Learn More",
   "viewDetails": "View Details",
   "allProjects": "Browse All Projects",

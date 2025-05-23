@@ -17,7 +17,31 @@ Main color theme: Modify the theme color in `src/styles/globals.css`
 
 Replace images: Replace in `public/images/`
 
-Internationalization: Internationalization uses next-i18next, with translation files stored in `public/locales/en` and `public/locales/zh`
+### Content and Internationalization
+This project uses [next-i18next](https://www.i18next.com/) for internationalization.
+
+#### Adding a New Language
+The language is determined based on the language parameter in the page path. If you need to add a new language, create a corresponding language folder under `public/locales/`, for example: `public/locales/ja`.
+Currently, only Chinese and English are supported, and all translation files are stored in `public/locales/zh` and `public/locales/en`.
+
+#### Modifying Content
+The translation items in the code are used to query the corresponding translation text for display. If you need to modify it, you can find the corresponding translation text in `public/locales/`.
+
+Add or modify the translation files for the corresponding pages in the `public/locales/en` and `public/locales/zh` directories, for example:
+- `public/locales/en/contact.json` and `public/locales/zh/contact.json` are used for the translation of the contact us page.
+- `public/locales/en/about.json` and `public/locales/zh/about.json` are used for the translation of the about us page.
+- `public/locales/en/aboutData.json` and `public/locales/zh/aboutData.json` are used for the translation of the staff information in the about us page.
+- `public/locales/en/partners.json` and `public/locales/zh/partners.json` are used for the translation of the partner page text.
+- `public/locales/en/partnersData.json` and `public/locales/zh/partnersData.json` are used for the translation of the partner list in the partner page.
+- `public/locales/en/contact.json` and `src/pages/en/contact.tsx` are used for the translation of the contact us page.
+- `public/locales/en/about.json` and `src/pages/en/about.tsx` are used for the translation of the about us page.
+- `public/locales/en/partners.json` and `src/pages/en/partners.tsx` are used for the translation of the partner page.
+- `public/locales/en/news.json` and `src/pages/en/news.tsx` are used for the translation of the news center page.
+- `public/locales/en/projects.json` and `public/locales/zh/projects.json` are used for the translation of the project list in the project page.
+
+Make sure that each page's translation file contains the corresponding translation content to display correctly in different language environments.
+
+
 
 ## Environment Variables
 The news page in this template uses the Plasmic CMS API for content management.

@@ -20,14 +20,14 @@
     "phoneAlt": "电话",
     "phoneNumber": "+86 138 1234 5678",
     "emailAlt": "邮箱",
-    "emailAddress": "info@cagantech.com",
+    "emailAddress": "info@CAGANTECH.com",
     "addressAlt": "地址",
     "address": "示例地址, 某某区, 某某市"
   },
   "cta": {
-    "title": "与 CAGANTECH 合作",
-    "description": "选择 CAGANTECH，选择创新、可靠、现代化的技术伙伴。",
+    "title": "与 {{companyName}} 合作",
+    "description": "选择 {{companyName}}，选择创新、可靠、现代化的技术伙伴。",
     "button": "开始合作"
   },
-  "copyright": "© {{year}} CAGANTECH. 版权所有"
+  "copyright": "© {{year}} {{companyName}}. 版权所有"
 } 

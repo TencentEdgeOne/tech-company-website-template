@@ -1,7 +1,7 @@
 {
   "hero": {
     "backgroundImageAlt": "People in office analyzing finance graphs",
-    "welcome": "Welcome to CAGANTECH",
+    "welcome": "Welcome to {{companyName}}",
     "headline1": "Shaping the Future",
     "headline2": "Innovative Visions",
     "button": "Learn More"

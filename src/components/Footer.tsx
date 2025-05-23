@@ -4,6 +4,7 @@ import Link from '@/components/Link'; // Import custom Link
 import Image from 'next/image'; // For SVG icons
 import CTASection from './CTASection'; // Import the CTA component
 import { useTranslation } from 'next-i18next'; // Import useTranslation
+import { COMPANY_NAME } from '../lib/companyConfig';
 
 const Footer = () => {
   const { t } = useTranslation('footer'); // Use 'footer' namespace
@@ -21,7 +22,7 @@ const Footer = () => {
           {/* Column 1: Brand and Description */}
           <div className="lg:col-span-2">
             <h3 className="text-2xl md:text-3xl font-extrabold font-[Poppins] text-black mb-4">
-              CAGANTECH
+              {COMPANY_NAME}
             </h3>
             <p className="text-[var(--accent-gray)] font-[Poppins] text-base leading-relaxed mb-4">
               {t('description', { defaultValue: '这是一段公司简介或页脚描述文字。您可以介绍公司的主要业务或愿景。'})}
@@ -62,7 +63,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2">
                  <Image src="/icons/email.svg" alt={t('contact.emailAlt', { defaultValue: '邮箱'})} width={20} height={20} className="mt-1"/>
-                <span className="text-[var(--accent-gray)] font-[Asap]">{t('contact.emailAddress', { defaultValue: 'info@cagantech.com'})}</span>
+                <span className="text-[var(--accent-gray)] font-[Asap]">{t('contact.emailAddress', { defaultValue: `info@${COMPANY_NAME.toLowerCase()}.com`})}</span>
               </li>
               <li className="flex items-center space-x-2">
                  <Image src="/icons/location.svg" alt={t('contact.addressAlt', { defaultValue: '地址'})} width={16} height={16} className="mt-1"/>
@@ -80,7 +81,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center text-[var(--accent-gray)] text-sm font-[Plus Jakarta Sans] pt-8 border-t border-gray-300">
-           {t('copyright', { defaultValue: '© {{year}} CAGANTECH. 版权所有', year: new Date().getFullYear() })}
+           {t('copyright', { defaultValue: `© {{year}} ${COMPANY_NAME}. 版权所有`, year: new Date().getFullYear(), companyName: COMPANY_NAME })}
         </div>
       </div>
     </footer>

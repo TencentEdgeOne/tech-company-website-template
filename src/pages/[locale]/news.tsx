@@ -4,6 +4,7 @@ import Link from '@/components/Link'; // 使用你的自定义 Link 组件
 import Head from 'next/head';
 import i18nextConfig from '../../../next-i18next.config.js'; // Import config for defaultLocale
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'; // Import directly
+import { mapLocaleForPlasmic } from '@/lib/localeMap';
 
 // --- Updated Data Interface ---
 // Reflects direct content fetching from Plasmic
@@ -178,7 +179,7 @@ export const getStaticProps: GetStaticProps<NewsPageProps> = async ({ params }) 
   try {
       const apiUrl = new URL(`https://data.plasmic.app/api/v1/cms/databases/${CMS_ID}/tables/${CMS_MODEL_ID}/query`);
       // Add locale parameter to fetch localized fields
-      apiUrl.searchParams.set('locale', locale === 'zh' ? 'default' : locale);
+      apiUrl.searchParams.set('locale', mapLocaleForPlasmic(locale));
      
       const response = await fetch(apiUrl.toString(), {
           headers: {

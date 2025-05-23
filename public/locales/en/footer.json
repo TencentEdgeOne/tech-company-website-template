@@ -20,14 +20,14 @@
     "phoneAlt": "Phone",
     "phoneNumber": "+86 138 1234 5678",
     "emailAlt": "Email",
-    "emailAddress": "info@cagantech.com",
+    "emailAddress": "info@CAGANTECH.com",
     "addressAlt": "Address",
     "address": "Example Address, District, City"
   },
   "cta": {
-    "title": "Partner with CAGANTECH",
-    "description": "Choose CAGANTECH, choose an innovative, reliable, and modern technology partner.",
+    "title": "Partner with {{companyName}}",
+    "description": "Choose {{companyName}}, choose an innovative, reliable, and modern technology partner.",
     "button": "Get Started"
   },
-  "copyright": "© {{year}} CAGANTECH. All rights reserved."
+  "copyright": "© {{year}} {{companyName}}. All rights reserved."
 } 

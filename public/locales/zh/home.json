@@ -1,7 +1,7 @@
 {
   "hero": {
     "backgroundImageAlt": "办公室里的人们正在分析财务图表",
-    "welcome": "欢迎来到 CAGANTECH",
+    "welcome": "欢迎来到 {{companyName}}",
     "headline1": "塑造未来",
     "headline2": "创新视野",
     "button": "了解更多"

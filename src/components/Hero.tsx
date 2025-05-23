@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import Link from './Link'; // Import custom Link
+import { COMPANY_NAME } from '../lib/companyConfig';
 
 const Hero = () => {
   const { t } = useTranslation('home');
@@ -24,7 +25,7 @@ const Hero = () => {
       <div className="relative z-10 px-4">
         {/* Welcome Text */}
         <p className="text-xl md:text-2xl lg:text-3xl font-semibold tracking-[.05em] font-[Poppins] mb-4">
-          {t('hero.welcome', { defaultValue: '欢迎来到 CAGANTECH'})}
+          {t('hero.welcome', { defaultValue: `欢迎来到 ${COMPANY_NAME}`, companyName: COMPANY_NAME })}
         </p>
 
         {/* Main Heading */}

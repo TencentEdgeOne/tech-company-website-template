@@ -1,5 +1,5 @@
 {
-  "companyName": "CAGANTECH",
+  "companyName": "{{companyName}}",
   "learnMore": "了解更多",
   "viewDetails": "查看详情",
   "allProjects": "浏览所有项目",

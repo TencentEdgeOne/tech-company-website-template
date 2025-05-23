@@ -3,6 +3,7 @@ import Image from 'next/image'; // For icons
 import { NextPage } from 'next'; // Import types
 import { useTranslation } from 'next-i18next'; // Import useTranslation
 import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'; // Import helpers
+import { COMPANY_NAME } from '../../lib/companyConfig';
 
 // Define namespaces required for this page
 const namespacesRequired = ['common', 'navbar', 'footer', 'contact'];
@@ -57,7 +58,7 @@ const ContactPage: NextPage = () => {
                </li>
                <li className="flex items-center space-x-3">
                   <Image src="/icons/email.svg" alt={t('info.emailAlt', { defaultValue: '邮箱'})} width={24} height={24}/>
-                 <span className="text-gray-700 font-[Asap]">{t('info.emailAddress', { defaultValue: 'info@cagantech.com'})}</span>
+                 <span className="text-gray-700 font-[Asap]">{t('info.emailAddress', { defaultValue: `info@${COMPANY_NAME.toLowerCase()}.com` })}</span>
                </li>
                <li className="flex items-start space-x-3">
                   <Image src="/icons/location.svg" alt={t('info.addressAlt', { defaultValue: '地址'})} width={24} height={24} className="mt-1"/>

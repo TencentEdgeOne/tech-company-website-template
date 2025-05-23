@@ -19,7 +19,28 @@ UI 基于[Business Tech Company UI Kit
 
 替换图片：在`public/images/`下替换
 
-国际化：国际化使用了 next-i18next，翻译文件存储在`public/locales/en`和 `public/locales/zh`
+### 文案与国际化
+本项目使用了 [next-i18next](https://www.i18next.com/) 进行国际化。
+#### 新增语言
+页面中根据页面 path 中的语言参数判断语言，如需新增语种，在`public/locales/`下新增对应语种的文件夹，例如：`public/locales/ja`。
+目前仅支持中文和英文，所有翻译文件存储在`public/locales/zh`和 `public/locales/en`。
+
+#### 修改文案
+代码内使用翻译项键值查询到对应的翻译文案进行展示，如需修改，在`public/locales/`下查询到对应键值的文案进行修改即可。
+
+在`public/locales/en`和`public/locales/zh`目录下，添加或修改对应页面的翻译文件，例如：
+- `public/locales/en/contact.json` 和 `public/locales/zh/contact.json` 用于联系我们页面的翻译。
+- `public/locales/en/about.json` 和 `public/locales/zh/about.json` 用于关于我们页面的翻译。
+- `public/locales/en/aboutData.json` 和 `public/locales/zh/aboutData.json` 用于关于我们页面里工作人员信息的翻译。
+- `public/locales/en/partners.json` 和 `public/locales/zh/partners.json` 用于合作伙伴页面文案的翻译。
+- `public/locales/en/partnersData.json` 和 `public/locales/zh/partnersData.json` 用于合作伙伴页面内合作伙伴列表的翻译。
+- `public/locales/en/contact.json` 和 `src/pages/en/contact.tsx` 用于联系我们页面的翻译。
+- `public/locales/en/about.json` 和 `src/pages/en/about.tsx` 用于关于我们页面的翻译。
+- `public/locales/en/partners.json` 和 `src/pages/en/partners.tsx` 用于合作伙伴页面的翻译。
+- `public/locales/en/news.json` 和 `src/pages/en/news.tsx` 用于新闻中心页面的翻译。
+- `public/locales/en/projects.json` 和 `public/locales/zh/projects.json` 用于项目页面中项目列表的翻译。
+
+确保每个页面的翻译文件都包含了对应的翻译内容，以便在不同语言环境下正确显示。
 
 
 ## 环境变量
