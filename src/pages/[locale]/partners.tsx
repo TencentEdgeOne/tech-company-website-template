@@ -6,7 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'; //
 import i18nextConfig from '../../../next-i18next.config.js'; // Import config for defaultLocale
 import fs from 'fs'; // Import fs for reading files
 import path from 'path'; // Import path for constructing paths
-import Image from 'next/image';
+import Image from "next/legacy/image";
 // Define Partner Data structure
 interface PartnerData {
   id: string;

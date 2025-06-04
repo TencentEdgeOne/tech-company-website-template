@@ -1,6 +1,6 @@
 import React from 'react';
 import { GetStaticPaths, GetStaticProps, NextPage, GetStaticPropsContext } from 'next';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from '@/components/Link';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';

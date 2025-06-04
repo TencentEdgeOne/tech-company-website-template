@@ -1,7 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Use custom Link instead
 import Link from '@/components/Link'; // Import custom Link
-import Image from 'next/image'; // For SVG icons
+import Image from "next/legacy/image"; // For SVG icons
 import CTASection from './CTASection'; // Import the CTA component
 import { useTranslation } from 'next-i18next'; // Import useTranslation
 import { COMPANY_NAME } from '../lib/companyConfig';

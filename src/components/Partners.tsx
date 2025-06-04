@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next'; // Import useTranslation
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 // Define an interface for partner data if needed, or just use an array of objects
 const partners = [

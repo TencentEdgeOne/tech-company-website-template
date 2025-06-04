@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Image from 'next/image'; // For icons
+import Image from "next/legacy/image"; // For icons
 import { NextPage } from 'next'; // Import types
 import { useTranslation } from 'next-i18next'; // Import useTranslation
 import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'; // Import helpers

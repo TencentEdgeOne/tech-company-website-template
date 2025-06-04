@@ -67,7 +67,6 @@ const NewsPage: React.FC<NewsPageProps> = ({ newsItems }) => { // Receive newsIt
         <title>{t('pageTitle', { defaultValue: '新闻中心'})}</title>
         <meta name="description" content={t('metaDescription', { defaultValue: '了解我们的最新动态和公告。'})} />
       </Head>
-
       <div className="bg-gray-50 py-16 md:py-24 px-4">
         <div className="container mx-auto">
           {/* Section Header */}

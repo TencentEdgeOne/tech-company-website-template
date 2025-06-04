@@ -45,7 +45,6 @@ const NewsDetailPage: React.FC<NewsDetailPageProps> = ({ article }) => {
         {/* Use first part of content for description, or add a dedicated excerpt field */}
         <meta name="description" content={article.content.substring(0, 150).replace(/<[^>]*>?/g, '') + '...'} />
       </Head>
-
       <div className="bg-white py-12 md:py-20 px-4">
         <div className="container mx-auto max-w-3xl">
           {/* Back link */}

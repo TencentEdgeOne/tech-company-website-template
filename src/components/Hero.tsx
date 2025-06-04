@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { useTranslation } from 'next-i18next';
 import Link from './Link'; // Import custom Link
 import { COMPANY_NAME } from '../lib/companyConfig';
