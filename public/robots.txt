@@ -29,4 +29,4 @@ Allow: /zh/
 Allow: /en/
 
 # Allow sitemap
-Sitemap: https://example.com/sitemap.xml 
+Sitemap: https://tech-company-website-template.edgeone.app/sitemap.xml 

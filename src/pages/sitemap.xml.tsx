@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next';
 import i18nextConfig from '../../next-i18next.config.js';
 
-const DOMAIN = 'https://example.com'; // 替换为你的实际域名
+const DOMAIN = 'tech-company-website-template.edgeone.app'; // 替换为你的实际域名
 
 // 定义所有静态路由
 const STATIC_PAGES = [
