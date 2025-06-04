@@ -5,7 +5,7 @@ import TopHeader from "@/components/TopHeader";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Head from "next/head";
-
+import Meta from "@/components/Meta";
 function App({ Component, pageProps }: AppProps) {
   const { isNewsEnabled = false } = pageProps;
 
@@ -17,6 +17,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <TopHeader />
       <Navbar isNewsEnabled={isNewsEnabled}/>
+      <Meta />
       <main>
         <Component {...pageProps} />
       </main>
