@@ -127,7 +127,7 @@ const NewsPage: React.FC<NewsPageProps> = ({ newsItems }) => { // Receive newsIt
 // --- Data Fetching ---
 export const getStaticPaths: GetStaticPaths = async () => {
   // If news is disabled via env var, don't generate paths
-  if (process.env.PLASMIC_CMS_ID === 'ignore') {
+  if (!process.env.PLASMIC_CMS_ID || process.env.PLASMIC_CMS_ID === 'ignore') {
     console.log('[news.tsx getStaticPaths] CMS_URL is ignore, returning empty paths.');
     return { paths: [], fallback: false };
   }
@@ -147,7 +147,7 @@ export const getStaticProps: GetStaticProps<NewsPageProps> = async ({ params }) 
   const namespacesRequired = ['common', 'navbar', 'footer', 'news']; // Define namespaces needed
 
   // Check if news feature is disabled
-  if (process.env.PLASMIC_CMS_ID === 'ignore') {
+  if (!process.env.PLASMIC_CMS_ID || process.env.PLASMIC_CMS_ID === 'ignore') {
        console.log('[news.tsx getStaticProps] CMS_URL is ignore, returning empty news list.');
        return {
            props: {
@@ -213,7 +213,7 @@ export const getStaticProps: GetStaticProps<NewsPageProps> = async ({ params }) 
 
   return {
     props: {
-      isNewsEnabled: process.env.PLASMIC_CMS_ID !== 'ignore',
+      isNewsEnabled: process.env.PLASMIC_CMS_ID && process.env.PLASMIC_CMS_ID !== 'ignore'  ,
       newsItems, // Pass the fetched data
       ...(await serverSideTranslations(locale, namespacesRequired)),
     },

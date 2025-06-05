@@ -81,7 +81,7 @@ const NewsDetailPage: React.FC<NewsDetailPageProps> = ({ article }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Check if feature is disabled
-  if (process.env.PLASMIC_CMS_ID === 'ignore') {
+  if (!process.env.PLASMIC_CMS_ID || process.env.PLASMIC_CMS_ID === 'ignore') {
     console.log('[news/[slug].tsx getStaticPaths] CMS is ignored, returning empty paths.');
     return { paths: [], fallback: false };
   }
@@ -146,7 +146,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<NewsDetailPageProps> = async ({ params }) => {
     // Check if feature is disabled (using the same env var as getStaticPaths)
-  if (process.env.PLASMIC_CMS_ID === 'ignore') {
+  if (!process.env.PLASMIC_CMS_ID || process.env.PLASMIC_CMS_ID === 'ignore') {
     console.log('[news/[slug].tsx getStaticProps] CMS is ignored, returning notFound.');
     return { notFound: true }; // Return 404 if feature disabled
   }
@@ -215,7 +215,7 @@ export const getStaticProps: GetStaticProps<NewsDetailPageProps> = async ({ para
 
   return {
     props: {
-      isNewsEnabled: process.env.PLASMIC_CMS_ID !== 'ignore',
+      isNewsEnabled: process.env.PLASMIC_CMS_ID && process.env.PLASMIC_CMS_ID !== 'ignore'  ,
       article,
       ...(await serverSideTranslations(locale, namespacesRequired)),
     },

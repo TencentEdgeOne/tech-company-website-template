@@ -156,7 +156,7 @@ const getStaticProps: GetStaticProps<AboutPageProps, { locale: string }> = async
 
     return {
       props: {
-        isNewsEnabled: process.env.PLASMIC_CMS_ID !== 'ignore',
+        isNewsEnabled: process.env.PLASMIC_CMS_ID && process.env.PLASMIC_CMS_ID !== 'ignore' ,
         ...allTranslations,
         teamMembers,
       },

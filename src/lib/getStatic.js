@@ -18,7 +18,7 @@ export async function getI18nProps(ctx, ns = ['common']) {
   // Ensure locale is valid, falling back to default if necessary
   const validLocale = i18nextConfig.i18n.locales.includes(locale) ? locale : i18nextConfig.i18n.defaultLocale;
   let props = {
-    isNewsEnabled: process.env.PLASMIC_CMS_ID !== 'ignore',
+    isNewsEnabled: process.env.PLASMIC_CMS_ID && process.env.PLASMIC_CMS_ID !== 'ignore'  ,
     ...(await serverSideTranslations(validLocale, ns))
   };
   return props;
