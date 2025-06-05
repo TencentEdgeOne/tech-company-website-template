@@ -58,16 +58,16 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li className="flex items-center space-x-2">
-                 <Image src="/icons/phone.svg" alt={t('contact.phoneAlt', { defaultValue: '电话'})} width={20} height={20} className="mt-1"/>
-                <span className="text-[var(--accent-gray)] font-[Asap]">{t('contact.phoneNumber', { defaultValue: '+86 138 1234 5678'})}</span>
+                 <Image src="/icons/phone.svg" alt={t('contact.phoneAlt', { defaultValue: '电话'})} width={16} height={16} className="mt-1"/>
+                <span className="text-[var(--accent-gray)] font-[Asap] ml-2">{t('contact.phoneNumber', { defaultValue: '+86 138 1234 5678'})}</span>
               </li>
               <li className="flex items-center space-x-2">
-                 <Image src="/icons/email.svg" alt={t('contact.emailAlt', { defaultValue: '邮箱'})} width={20} height={20} className="mt-1"/>
-                <span className="text-[var(--accent-gray)] font-[Asap]">{t('contact.emailAddress', { defaultValue: `info@${COMPANY_NAME.toLowerCase()}.com`})}</span>
+                 <Image src="/icons/email.svg" alt={t('contact.emailAlt', { defaultValue: '邮箱'})} width={16} height={16} className="mt-1"/>
+                <span className="text-[var(--accent-gray)] font-[Asap] ml-2">{t('contact.emailAddress', { defaultValue: `info@${COMPANY_NAME.toLowerCase()}.com`})}</span>
               </li>
               <li className="flex items-center space-x-2">
                  <Image src="/icons/location.svg" alt={t('contact.addressAlt', { defaultValue: '地址'})} width={16} height={16} className="mt-1"/>
-                <span className="text-[var(--accent-gray)] font-[Asap] leading-relaxed">
+                <span className="text-[var(--accent-gray)] font-[Asap] leading-relaxed ml-2">
                   {t('contact.address', { defaultValue: '示例地址, 某某区, 某某市'})}
                 </span>
               </li>
