@@ -4,7 +4,6 @@ import languageDetector from './languageDetector';
 import i18nextConfig from '../../next-i18next.config.js';
 import LanguageLoading from '@/components/LanguageLoading';
 
-const LANGUAGE_STORAGE_KEY = 'user_language_preference';
 
 export const useRedirect = (to?: string) => {
   const router = useRouter();
@@ -16,14 +15,8 @@ export const useRedirect = (to?: string) => {
       return;
     }
 
-    // Attempt to get language settings from localStorage first
-    let detectedLng = localStorage.getItem(LANGUAGE_STORAGE_KEY);
-    
     // If not found in localStorage, detect and save
-    if (!detectedLng) {
-      detectedLng = languageDetector.detect() || i18nextConfig.i18n.defaultLocale;
-      localStorage.setItem(LANGUAGE_STORAGE_KEY, detectedLng);
-    }
+    const detectedLng = languageDetector.detect() || i18nextConfig.i18n.defaultLocale;
 
     // If the current path already includes the correct language prefix, no redirect is needed
     if (targetPath.startsWith('/' + detectedLng)) {
