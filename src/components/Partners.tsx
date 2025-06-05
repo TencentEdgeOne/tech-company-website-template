@@ -4,9 +4,9 @@ import Image from "next/legacy/image";
 
 // Define an interface for partner data if needed, or just use an array of objects
 const partners = [
-  { name: 'Google', logoSrc: '/logos/google.svg', id: '1:76', alt: '谷歌标志' },
-  { name: 'Microsoft', logoSrc: '/logos/microsoft.svg', id: '1:98', alt: '微软标志' },
-  { name: 'Zoom', logoSrc: '/logos/zoom.svg', id: '1:106', alt: 'Zoom 标志' },
+  { name: 'Google', logoSrc: '/logos/google.svg', id: '1:76', alt: 'Google Logo' },
+  { name: 'Microsoft', logoSrc: '/logos/microsoft.svg', id: '1:98', alt: 'Microsoft Logo' },
+  { name: 'Zoom', logoSrc: '/logos/zoom.svg', id: '1:106', alt: 'Zoom Logo' },
   // Add more partners if needed based on the Figma design (it shows 3)
 ];
 
@@ -28,7 +28,7 @@ const Partners = () => {
             <div key={partner.id} className="transition duration-300 ease-in-out">
               {/* Using img tag for SVG for better control, could use Image component if needed */}
               <Image 
-                width={100}
+                width={200}
                 height={100}
                 src={partner.logoSrc} 
                 alt={t(`partnersSection.logoAlt.${partner.name.toLowerCase()}`, { defaultValue: partner.alt })}
