@@ -5,6 +5,8 @@ import Link from './Link'; // Use the custom Link component
 import { useTranslation } from 'next-i18next'; // Import useTranslation
 // import i18nextConfig from '../../next-i18next.config.js'; // No longer needed here
 
+const LANGUAGE_STORAGE_KEY = 'user_language_preference';
+
 interface LanguageSwitchLinkProps {
   locale: string;
   href?: string; // Allow explicitly passing a base href (like '/')
@@ -55,6 +57,8 @@ const LanguageSwitchLink: React.FC<LanguageSwitchLinkProps> = ({ locale, classNa
   const languageName = t(`language.${locale}`, { defaultValue: locale.toUpperCase() });
 
   const handleClick = () => {
+    // 更新本地存储中的语言设置
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, locale);
     // Temporarily disable cache logic if languageDetector causes issues
     /*
     if (languageDetector) { 

@@ -1,5 +1,5 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import i18nextConfig from '../../next-i18next.config'; // Adjusted path relative to lib/
+import i18nextConfig from '../../next-i18next.config.js'; // Adjusted path relative to lib/
 
 export const getI18nPaths = () =>
   i18nextConfig.i18n.locales.map((lng) => ({

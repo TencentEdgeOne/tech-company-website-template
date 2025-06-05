@@ -6,8 +6,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import Meta from "@/components/Meta";
+
 function App({ Component, pageProps }: AppProps) {
   const { isNewsEnabled = false } = pageProps;
+
 
   return (
     <>
