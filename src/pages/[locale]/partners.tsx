@@ -47,7 +47,7 @@ const PartnersPage: NextPage<PartnersPageProps> = ({ partnersData }) => {
             <div key={partner.id} className="border border-gray-200 rounded-lg p-6 text-center flex flex-col items-center hover:shadow-md transition-shadow duration-300">
               <div className="mb-4 h-16 flex items-center justify-center">
                  <Image
-                    width={100}
+                    width={200}
                     height={100}
                    src={partner.logoSrc}
                    alt={partner.alt} // Alt text comes from the loaded JSON data
