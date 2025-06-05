@@ -8,7 +8,7 @@ import LanguageLoading from '@/components/LanguageLoading';
 export const useRedirect = (to?: string) => {
   const router = useRouter();
   const targetPath = to || router.asPath;
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (!languageDetector) {
@@ -49,17 +49,16 @@ export const Redirect = () => {
 
 Redirect.displayName = 'Redirect';
 
-export const getRedirect = (to?: string) => {
-  const RedirectComponent = () => {
-    const isLoading = useRedirect(to);
+//   const RedirectComponent = () => {
+//     const isLoading = useRedirect(to);
     
-    if (isLoading) {
-      return <LanguageLoading />;
-    }
+//     if (isLoading) {
+//       return <LanguageLoading />;
+//     }
     
-    return null;
-  };
+//     return null;
+//   };
   
-  RedirectComponent.displayName = `RedirectTo(${to})`;
-  return RedirectComponent;
-}; 
+//   RedirectComponent.displayName = `RedirectTo(${to})`;
+//   return RedirectComponent;
+// }; 
