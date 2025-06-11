@@ -52,7 +52,7 @@ function App({ Component, pageProps }: AppProps) {
       <TopHeader />
       <Navbar isNewsEnabled={isNewsEnabled}/>
       <Meta />
-      <main>
+      <main className="bg-white">
         <Component {...pageProps} />
       </main>
       <Footer />
