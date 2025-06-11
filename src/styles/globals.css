@@ -63,7 +63,7 @@
   }
 
   a {
-    color: var(--primary);
+    /* color: var(--primary); */
   }
 
   a:hover {

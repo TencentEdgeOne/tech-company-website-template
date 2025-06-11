@@ -59,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ isNewsEnabled }) => {
           <div className="container mx-auto flex justify-between items-center">
             {/* Logo */}
             <div className="text-3xl font-extrabold font-[Poppins]">
-              <Link href="/">{COMPANY_NAME}</Link>
+              <Link href="/" className="text-[var(--primary)]">{COMPANY_NAME}</Link>
             </div>
 
             {/* Desktop Menu & Language Switcher */}
