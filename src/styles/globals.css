@@ -42,7 +42,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #ffffff;
     
     /* Dark mode specific overrides */
     --primary: #2d5df7;
@@ -50,7 +50,24 @@
     --bg-light-gray: #1a1a1a;
     --bg-gray: #1e1e1e;
     --secondary: #e0e0e0;
+    --secondary-light: #a0a0a0;
     --accent-gray: #8a8d96;
+    --accent-gray-light: #4a4a4a;
+    --accent-blue-light: #4a5bff;
+    --accent-dark-blue: #7b84ff;
+  }
+
+  /* 深色模式下的文本颜色 */
+  h1, h2, h3, h4, h5, h6, p, span, div {
+    color: var(--foreground);
+  }
+
+  a {
+    color: var(--primary);
+  }
+
+  a:hover {
+    color: var(--primary-hover);
   }
 }
 

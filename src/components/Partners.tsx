@@ -14,7 +14,7 @@ const Partners = () => {
   const { t } = useTranslation('home'); // Use 'home' namespace
 
   return (
-    <div className="bg-white py-12 md:py-20">
+    <div className="py-12 md:py-20">
       <div className="container mx-auto text-center px-4 lg:w-1/2">
         {/* Title */}
         <h2 className="text-2xl md:text-3xl font-semibold text-[var(--primary)] tracking-[.05em] font-[Poppins] mb-10 md:mb-16">

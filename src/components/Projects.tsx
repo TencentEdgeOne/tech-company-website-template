@@ -7,7 +7,7 @@ const Projects = () => {
   const { t: tCommon } = useTranslation('common');
 
   return (
-    <div className="bg-white py-16 md:py-24 px-4">
+    <div className="py-16 md:py-24 px-4">
       <div className="container mx-auto flex flex-col items-center">
         {/* Section Header */}
         <div className="text-center max-w-3xl mb-12 md:mb-16">
