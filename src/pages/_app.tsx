@@ -24,13 +24,13 @@ function App({ Component, pageProps }: AppProps) {
       languageDetector?.detect() || i18nextConfig.i18n.defaultLocale;
     const currentPath = router.asPath;
 
-    // 检查当前路径是否以配置的语言代码开头
+    // Check if the current path starts with the configured language code
     const pathStartsWithLocale = i18nextConfig.i18n.locales.some(
       (locale) =>
         currentPath.startsWith(`/${locale}/`) || currentPath === `/${locale}`
     );
 
-    // 只有当路径不以任何配置的语言代码开头时，才进行语言重定向
+    // Language redirection is only performed when the path does not start with any configured language code
     if (!pathStartsWithLocale && currentPath !== "/404") {
       const newPath =
         "/" + detectedLng + (currentPath === "/" ? "" : currentPath);
