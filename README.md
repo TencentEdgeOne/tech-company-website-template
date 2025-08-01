@@ -44,6 +44,32 @@ Make sure that each page's translation file contains the corresponding translati
 
 
 ## Environment Variables
+
+### Web3Forms Configuration (Contact Form)
+This template uses Web3Forms for the contact form functionality. To enable email sending from the contact form:
+
+1. **Get Web3Forms API Key**:
+   - Visit [Web3Forms](https://web3forms.com/)
+   - Click "Get Access Key"
+   - Enter your email address
+   - Check your email for the API key
+
+2. **Configure Environment Variables**:
+   Create a `.env.local` file in the project root and add:
+   ```env
+   NEXT_PUBLIC_WEB3FORMS_KEY=your_api_key_here
+   ```
+
+3. **Test the Contact Form**:
+   - Start the development server: `npm run dev`
+   - Visit the contact page
+   - Fill out and submit the form
+   - Check if you receive the email
+   
+> Note: The Web3Forms platform has anti-spam mechanisms, please use real names and emails for testing. Additionally, please simulate real scenarios for the content you send, and avoid writing obvious test content.
+
+
+### Plasmic CMS API Configuration
 The news page in this template uses the Plasmic CMS API for content management.
 > If this feature and its pages are not needed, you can set the corresponding environment variable to `ignore`. The project will then automatically skip all news-related pages and links.
 

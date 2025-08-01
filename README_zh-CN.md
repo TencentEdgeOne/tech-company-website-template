@@ -44,6 +44,31 @@ UI 基于[Business Tech Company UI Kit
 
 
 ## 环境变量
+
+### Web3Forms 配置（联系表单）
+此模板使用 Web3Forms 实现联系表单的邮件发送功能。要启用联系表单的邮件发送：
+
+1. **获取 Web3Forms API Key**：
+   - 访问 [Web3Forms](https://web3forms.com/)
+   - 点击 "Get Access Key"
+   - 输入您的邮箱地址
+   - 检查邮箱获取 API Key
+
+2. **配置环境变量**：
+   在项目根目录创建 `.env.local` 文件并添加：
+   ```env
+   NEXT_PUBLIC_WEB3FORMS_KEY=your_api_key_here
+   ```
+
+3. **测试联系表单**：
+   - 启动开发服务器：`npm run dev`
+   - 访问联系页面
+   - 填写并提交表单
+   - 检查是否收到邮件
+
+> 注意：Web3Forms平台有防垃圾邮件机制，测试时请使用真实的姓名和邮件。并且发送内容请尽量模拟真实情形，不要填写明显的测试内容。
+
+### Plasmic CMS API 配置
 此模板的新闻页面使用了PLASMIC CMS API 进行内容管理。
 > 如果不需要此功能及页面，可以在环境变量填入 ignore，项目会自动跳过所有 news 相关的页面和链接。
 
