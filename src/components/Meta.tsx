@@ -30,9 +30,9 @@ const Meta: React.FC<MetaProps> = ({
     href: `${domain}${lang === i18nextConfig.i18n.defaultLocale ? '' : `/${lang}`}${currentPath}`,
   }));
 
-  const defaultTitle = `${COMPANY_NAME} - 创新技术解决方案`;
-  const defaultDescription = '我们提供创新的技术解决方案，帮助企业实现数字化转型。';
-  const defaultKeywords = '技术,解决方案,创新,数字化转型';
+  const defaultTitle = `${COMPANY_NAME} - 创新技术解决方案 | EdgeOne Makers`;
+  const defaultDescription = '我们提供创新的技术解决方案，帮助企业实现数字化转型。 · Demo only · EdgeOne Makers';
+  const defaultKeywords = 'EdgeOne Makers, Demo only';
 
   return (
     <Head>

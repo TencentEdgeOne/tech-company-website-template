@@ -13,6 +13,9 @@ class MyDocument extends Document {
   return (
     <Html lang={currentLocale as string}>
       <Head>
+        <title>EdgeOne Makers Template</title>
+        <meta name="description" content="Demo only · EdgeOne Makers" />
+        <meta name="keywords" content="EdgeOne Makers, Demo only" />
         <title>Tech Company Website Template</title>
       </Head>
       <body className="antialiased">
