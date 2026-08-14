@@ -13,7 +13,6 @@ class MyDocument extends Document {
   return (
     <Html lang={currentLocale as string}>
       <Head>
-        <title>Tech Company Website Template | EdgeOne Makers</title>
         <meta name="description" content="Demo only · EdgeOne Makers" />
         <meta name="keywords" content="EdgeOne Makers, Demo only" />
       </Head>

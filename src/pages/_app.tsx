@@ -52,10 +52,10 @@ function App({ Component, pageProps }: AppProps) {
   return isLanguageSet ? (
     <>
       <Head>
-        <title>Tech Company Website Template</title>
+        <title>Tech Company Website Template | EdgeOne Makers</title>
         <meta
           name="description"
-          content="A Tech Company Website Template with Next.js, Tailwind CSS, and Plasmic CMS."
+          content="A Tech Company Website Template with Next.js, Tailwind CSS, and Plasmic CMS. · Demo only · EdgeOne Makers"
         />
       </Head>
       <TopHeader />
